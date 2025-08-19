@@ -54,10 +54,29 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: '🛠️ Troubleshooting & Support',
+      collapsible: true,
+      items: [
+        'troubleshooting/index',
+        'troubleshooting/wallet-issues'
+      ]
+    },
+    {
+      type: 'category',
       label: '💡 Advanced Topics',
       collapsible: true,
       items: [
         'advanced/cpmm-price-impact'
+      ]
+    },
+    {
+      type: 'category',
+      label: '📚 Deep Dives & Theory',
+      collapsible: true,
+      items: [
+        'deep-dives/index',
+        'deep-dives/economic-theory',
+        'deep-dives/social-dynamics'
       ]
     },
     {
