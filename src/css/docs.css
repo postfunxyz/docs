@@ -1,0 +1,146 @@
+/* Custom styles for documentation pages to match retro computer aesthetic */
+
+/* Documentation page title */
+.markdown h1 {
+  color: #00ff00;
+  text-shadow: 0 0 5px #00ff00;
+  border-bottom: 1px solid #00ff00;
+  padding-bottom: 0.5rem;
+}
+
+/* Documentation page headers */
+.markdown h2 {
+  color: #00cc00;
+  border-bottom: 1px solid #006600;
+  padding-bottom: 0.3rem;
+}
+
+.markdown h3 {
+  color: #00cc00;
+}
+
+/* Documentation page text */
+.markdown p {
+  color: #00cc00;
+  line-height: 1.6;
+}
+
+/* Documentation page lists */
+.markdown ul,
+.markdown ol {
+  color: #00cc00;
+}
+
+.markdown li {
+  margin-bottom: 0.5rem;
+}
+
+/* Documentation page links */
+.markdown a {
+  color: #00ff00;
+  text-decoration: underline;
+}
+
+.markdown a:hover {
+  color: #00ff00;
+  text-decoration: none;
+  background-color: #001a00;
+}
+
+/* Documentation page code blocks */
+.markdown code {
+  background-color: #1a1a1a;
+  border: 1px solid #006600;
+  color: #00ff00;
+  padding: 2px 4px;
+}
+
+.markdown pre {
+  background-color: #1a1a1a;
+  border: 1px solid #006600;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.markdown pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #00ff00;
+}
+
+/* Documentation page blockquotes */
+.markdown blockquote {
+  background-color: #001a00;
+  border-left: 4px solid #00ff00;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.markdown blockquote p {
+  margin: 0;
+  color: #00cc00;
+}
+
+/* Documentation page tables */
+.markdown table {
+  background-color: #000000;
+  border: 1px solid #00ff00;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.markdown table th,
+.markdown table td {
+  border: 1px solid #006600;
+  padding: 0.5rem;
+  color: #00cc00;
+}
+
+.markdown table th {
+  background-color: #001a00;
+  color: #00ff00;
+  font-weight: bold;
+}
+
+/* Documentation page alerts */
+.alert {
+  background-color: #001a00;
+  border: 1px solid #00ff00;
+  color: #00cc00;
+}
+
+.alert a {
+  color: #00ff00;
+  text-decoration: underline;
+}
+
+.alert a:hover {
+  background-color: #003300;
+}
+
+.alert--info {
+  border-color: #00ff00;
+}
+
+.alert--success {
+  border-color: #00ff00;
+}
+
+.alert--warning {
+  border-color: #ffff00;
+  color: #ffff00;
+}
+
+.alert--danger {
+  border-color: #ff0000;
+  color: #ff0000;
+}
+
+/* Force dark theme for docs */
+[data-theme='light'] .markdown,
+[data-theme='dark'] .markdown {
+  background-color: #000000;
+  color: #00cc00;
+}

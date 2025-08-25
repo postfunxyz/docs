@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
 /**
  * Any CSS included here will be global. The classic template
  * bundles Infima by default. Infima is a CSS framework designed to
@@ -6,25 +8,282 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #00ff00;
+  --ifm-color-primary-dark: #00cc00;
+  --ifm-color-primary-darker: #00aa00;
+  --ifm-color-primary-darkest: #008800;
+  --ifm-color-primary-light: #22ff22;
+  --ifm-color-primary-lighter: #44ff44;
+  --ifm-color-primary-lightest: #66ff66;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  
+  /* Retro color palette */
+  --retro-text: #00ff00;
+  --retro-text-dim: #00cc00;
+  --retro-text-dark: #006600;
+  --retro-background: #000000;
+  --retro-surface: #1a1a1a;
+  --retro-border: #333333;
+  --retro-error: #ff0000;
+  --retro-error-dark: #cc0000;
+  
+  /* Retro font */
+  --ifm-font-family-base: 'VT323', monospace;
+  --ifm-font-family-monospace: 'VT323', monospace;
+  --ifm-font-size-base: 16px;
+  --ifm-font-size-sm: 14px;
+  --ifm-font-size-xs: 12px;
+  
+  /* Retro spacing */
+  --ifm-spacing-micro: 2px;
+  --ifm-spacing-small: 4px;
+  --ifm-spacing-medium: 8px;
+  --ifm-spacing-large: 16px;
+  --ifm-spacing-xl: 24px;
+  
+  /* Retro border thickness */
+  --ifm-border-width-thin: 1px;
+  --ifm-border-width-thick: 2px;
+}
+
+/* Force dark theme */
+html[data-theme='light'] {
+  --ifm-color-primary: #00ff00;
+  --ifm-color-primary-dark: #00cc00;
+  --ifm-color-primary-darker: #00aa00;
+  --ifm-color-primary-darkest: #008800;
+  --ifm-color-primary-light: #22ff22;
+  --ifm-color-primary-lighter: #44ff44;
+  --ifm-color-primary-lightest: #66ff66;
+  
+  /* Retro color palette */
+  --retro-text: #00ff00;
+  --retro-text-dim: #00cc00;
+  --retro-text-dark: #006600;
+  --retro-background: #000000;
+  --retro-surface: #1a1a1a;
+  --retro-border: #333333;
+  --retro-error: #ff0000;
+  --retro-error-dark: #cc0000;
+  
+  background-color: var(--retro-background);
+  color: var(--retro-text);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #00ff00;
+  --ifm-color-primary-dark: #00cc00;
+  --ifm-color-primary-darker: #00aa00;
+  --ifm-color-primary-darkest: #008800;
+  --ifm-color-primary-light: #22ff22;
+  --ifm-color-primary-lighter: #44ff44;
+  --ifm-color-primary-lightest: #66ff66;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  
+  /* Retro color palette */
+  --retro-text: #00ff00;
+  --retro-text-dim: #00cc00;
+  --retro-text-dark: #006600;
+  --retro-background: #000000;
+  --retro-surface: #1a1a1a;
+  --retro-border: #333333;
+  --retro-error: #ff0000;
+  --retro-error-dark: #cc0000;
+  
+  /* Retro font */
+  --ifm-font-family-base: 'VT323', monospace;
+  --ifm-font-family-monospace: 'VT323', monospace;
+  --ifm-font-size-base: 16px;
+  --ifm-font-size-sm: 14px;
+  --ifm-font-size-xs: 12px;
+  
+  background-color: var(--retro-background);
+  color: var(--retro-text);
+}
+
+/* Retro button styles */
+.retro-button {
+  background-color: var(--retro-background);
+  border: var(--ifm-border-width-thick) solid var(--retro-text);
+  color: var(--retro-text);
+  font-family: var(--ifm-font-family-base);
+  padding: var(--ifm-spacing-small) var(--ifm-spacing-medium);
+  box-shadow: 
+    inset calc(-1 * var(--ifm-border-width-thick)) calc(-1 * var(--ifm-border-width-thick)) 0 0 var(--retro-text-dark),
+    inset var(--ifm-border-width-thick) var(--ifm-border-width-thick) 0 0 var(--retro-text);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.retro-button:hover {
+  background-color: #001a00;
+  color: var(--retro-text);
+  text-decoration: none;
+}
+
+.retro-button:active {
+  box-shadow: 
+    inset var(--ifm-border-width-thick) var(--ifm-border-width-thick)) 0 0 var(--retro-text-dark),
+    inset calc(-1 * var(--ifm-border-width-thick)) calc(-1 * var(--ifm-border-width-thick)) 0 0 var(--retro-text);
+  background-color: #003300;
+}
+
+/* Retro input styles */
+.retro-input {
+  background-color: var(--retro-background);
+  border: var(--ifm-border-width-thin) solid var(--retro-text);
+  color: var(--retro-text);
+  font-family: var(--ifm-font-family-base);
+  padding: var(--ifm-spacing-small);
+  box-shadow: 
+    inset var(--ifm-border-width-thin) var(--ifm-border-width-thin) 0 0 var(--retro-background),
+    inset calc(-1 * var(--ifm-border-width-thin)) calc(-1 * var(--ifm-border-width-thin)) 0 0 var(--retro-text-dark);
+}
+
+.retro-input:focus {
+  outline: var(--ifm-border-width-thin) solid var(--retro-text);
+  background-color: #001a00;
+}
+
+/* Retro card styles */
+.retro-card {
+  background-color: var(--retro-background);
+  border: var(--ifm-border-width-thin) solid var(--retro-text);
+  box-shadow: 
+    inset var(--ifm-border-width-thin) var(--ifm-border-width-thin) 0 0 var(--retro-background),
+    inset calc(-1 * var(--ifm-border-width-thin)) calc(-1 * var(--ifm-border-width-thin)) 0 0 var(--retro-text-dark);
+  padding: var(--ifm-spacing-medium);
+}
+
+/* Retro badge styles */
+.retro-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--ifm-spacing-micro) var(--ifm-spacing-small);
+  font-size: var(--ifm-font-size-xs);
+  font-family: var(--ifm-font-family-base);
+  border: var(--ifm-border-width-thin) solid var(--retro-text);
+  background-color: var(--retro-background);
+  color: var(--retro-text);
+}
+
+/* Retro status indicator */
+.retro-status-indicator {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--retro-text);
+  border: var(--ifm-border-width-thin) solid var(--retro-background);
+}
+
+.retro-status-indicator.connected {
+  background-color: var(--retro-text);
+  box-shadow: 0 0 5px var(--retro-text);
+}
+
+.retro-status-indicator.disconnected {
+  background-color: var(--retro-error);
+}
+
+/* Retro blinking cursor */
+.retro-blinking-cursor::after {
+  content: "▋";
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Retro loading spinner */
+.retro-loading {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: var(--ifm-border-width-thick) solid var(--retro-text);
+  border-top: var(--ifm-border-width-thick) solid var(--retro-background);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Retro scanlines effect */
+.retro-scanlines {
+  position: relative;
+  overflow: hidden;
+}
+
+.retro-scanlines::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(0, 255, 0, 0.05) 50%, rgba(0, 0, 0, 0.25) 50%);
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Ensure all text uses the retro font */
+* {
+  font-family: 'VT323', monospace !important;
+}
+
+/* Navigation bar styling */
+.navbar {
+  background-color: var(--retro-background);
+  border-bottom: var(--ifm-border-width-thin) solid var(--retro-text);
+}
+
+.navbar__link {
+  color: var(--retro-text) !important;
+}
+
+.navbar__link:hover {
+  color: var(--retro-text-dim) !important;
+}
+
+/* Footer styling */
+.footer {
+  background-color: var(--retro-background);
+  border-top: var(--ifm-border-width-thin) solid var(--retro-text);
+  color: var(--retro-text);
+  padding: var(--ifm-spacing-medium) var(--ifm-spacing-large);
+}
+
+.footer__link-item {
+  color: var(--retro-text) !important;
+}
+
+.footer__link-item:hover {
+  color: var(--retro-text-dim) !important;
+}
+
+.footer__copyright {
+  color: var(--retro-text-dim);
+  font-size: var(--ifm-font-size-base);
+  text-align: center;
+}
+
+/* Code block styling */
+.codeBlockLines_node_modules-\@docusaurus-theme-common-lib-components-CodeBlock-Content-styles-module {
+  background-color: var(--retro-surface) !important;
+  color: var(--retro-text) !important;
+}
+
+/* Alert styling */
+.alert {
+  background-color: var(--retro-surface) !important;
+  border: var(--ifm-border-width-thin) solid var(--retro-text) !important;
+  color: var(--retro-text) !important;
 }
